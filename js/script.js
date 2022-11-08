@@ -2,7 +2,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            email: []
+            emails: []
         }
     },
     computed: {
@@ -14,15 +14,15 @@ createApp({
             })
         },
         CleanArray() {
-            this.email.splice(0);
+            this.emails.splice(0);
             for (let i = 0; i < 10; i++) {
-                this.RandomArray(this.email);
+                this.RandomArray(this.emails);
             }
         },
     },
     mounted() {
         for (let i = 0; i < 10; i++) {
-            this.RandomArray(this.email);
+            this.RandomArray(this.emails);
         }
     }
 }).mount('#app')
